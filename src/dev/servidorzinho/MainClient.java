@@ -2,10 +2,9 @@ package dev.servidorzinho;
 
 import java.io.IOException;
 
-public class Main {
-
+public class MainClient {
     public static void main(String[] args) throws IOException {
-        Servidor servidor = new Servidor(12345);
-        System.out.println("Servidor Concluído!");
+        Cliente cliente = new Cliente(12345);
+        System.out.println("Cliente concluido!");
     }
 }
