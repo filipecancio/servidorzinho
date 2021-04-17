@@ -1,5 +1,6 @@
-package servidorzinho.src.dev.servidorzinho;
+package dev.servidorzinho;
 
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -20,8 +21,8 @@ public class Servidor {
         );
 
         Scanner s = new Scanner(cliente.getInputStream());
-        while (s.hasNextLine()) {
-            System.out.println(s.nextLine());
+        while (s.hasNext()) {
+            System.out.println(s.next());
         }
 
         s.close();

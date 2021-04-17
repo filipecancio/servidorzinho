@@ -1,4 +1,4 @@
-package servidorzinho.src.dev.servidorzinho;
+package dev.servidorzinho;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -14,12 +14,11 @@ public class Cliente {
         Socket cliente = new Socket(ip,port);
         System.out.println("Servidor conectado !");
 
-        
-        
         PrintStream saida = new PrintStream(cliente.getOutputStream());
         Scanner teclado = new Scanner(System.in);
-        while (teclado.hasNextLine()) {
-            saida.println(teclado.nextLine());
+
+        while (teclado.hasNext()) {
+            saida.println(teclado.next());
         }
         saida.close();
         teclado.close();
