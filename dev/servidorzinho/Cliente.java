@@ -17,8 +17,8 @@ public class Cliente {
         PrintStream saida = new PrintStream(cliente.getOutputStream());
         Scanner teclado = new Scanner(System.in);
 
-        while (teclado.hasNext()) {
-            saida.println(teclado.next());
+        while (cliente.isConnected()) {
+            saida.println(teclado.next().charAt(0));
         }
         saida.close();
         teclado.close();

@@ -21,8 +21,8 @@ public class Servidor {
         );
 
         Scanner s = new Scanner(cliente.getInputStream());
-        while (s.hasNext()) {
-            System.out.println(s.next());
+        while (cliente.isConnected()) {
+            System.out.println(s.next() + System.lineSeparator());
         }
 
         s.close();
